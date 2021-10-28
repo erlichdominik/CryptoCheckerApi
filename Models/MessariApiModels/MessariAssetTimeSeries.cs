@@ -1,4 +1,6 @@
 using System;
+using System.Text.Json.Serialization;
+using System.Collections.Generic;
 
 namespace crypto_checker_api.Models.MessariApiModels {
     public class Status
