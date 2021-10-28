@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace crypto_checker_api.Models.MessariApiModels
+namespace crypto_checker_api.Models.MessariApiModels.MessariAllAssets
 {
 
     public class Status
