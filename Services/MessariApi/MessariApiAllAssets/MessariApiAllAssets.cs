@@ -8,7 +8,7 @@ namespace crypto_checker_api.Services.MessariApi.MessariApiAllAssets
     {
         private readonly IHttpClientFactory _httpClientFactory;
 
-        public MessariAllAssets(IHttpClientFactory httpClientFactory)
+        public MessariApiAllAssets(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
