@@ -1,15 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using crypto_checker_api.Services.MessariApi.MessariApiAllAssets;
+using crypto_checker_api.Services.MessariApi.MessariApiAssetTimeSeries;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
 namespace crypto_checker_api
@@ -26,7 +21,8 @@ namespace crypto_checker_api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddTransient<IMessariApiAllAssets, MessariApiAllAssets>();
+            services.AddTransient<IMessariApiAssetTimeSeries, MessariApiAssetTimeSeries>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
