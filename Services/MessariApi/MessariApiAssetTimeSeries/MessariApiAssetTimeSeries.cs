@@ -5,7 +5,7 @@ using crypto_checker_api.Models.MessariApiModels.MessariAssetTimeSeries;
 
 namespace crypto_checker_api.Services.MessariApi.MessariApiAssetTimeSeries
 {
-    public class MessariApiAssetTimeSeries : IMessariApiAssertTimeSeries
+    public class MessariApiAssetTimeSeries : IMessariApiAssetTimeSeries
     {
         private readonly IHttpClientFactory _httpClientFactory;
 
