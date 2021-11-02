@@ -21,7 +21,10 @@ namespace crypto_checker_api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IMessariApiAllAssets, MessariApiAllAssets>();
+        //Add HttpClient DJ
+        services.AddHttpClient();
+
+          services.AddTransient<IMessariApiAllAssets, MessariApiAllAssets>();
             services.AddTransient<IMessariApiAssetTimeSeries, MessariApiAssetTimeSeries>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
