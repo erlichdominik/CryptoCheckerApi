@@ -14,8 +14,7 @@ namespace crypto_checker_api.Controllers
         {
             _messariAllAssets = messariAllAssets;
         }
-
-        [HttpGet]
+        [HttpGet("assets")]
         public async Task<IActionResult> GetMessariApiAllAssets()
         {
             var response = await _messariAllAssets.GetMessariApiAllAssetsAsync();
