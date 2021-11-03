@@ -20,25 +20,14 @@ namespace crypto_checker_api.Controllers
             var response = await _messariAllAssets.GetMessariApiAllAssetsAsync();
 
             //TODO(dominik) add HTTP status to validate data
-            if (response == null)
-            {
-                return NoContent();
-            }
-
-            return Ok(response);
+            return response != null ? Ok(response) : NotFound();
         }
 
         [HttpGet("assets/market_data")]
         public async Task<IActionResult> GetMasseriApiAllAssetsWithMarketData()
         {
             var response = await _messariAllAssets.GetMessariAllAssetsWithMarketDataAsync();
-
-            if (response == null)
-            {
-                return NoContent();
-            }
-
-            return Ok(response);
+            return response != null ? Ok(response) : NotFound();
         }
 
     }
